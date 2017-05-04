@@ -1,0 +1,28 @@
+
+<div class="modal-header">
+	<h3 class="modal-title" id="modal-title">DELETE BOOK</h3>
+	
+</div>
+
+<div class="modal-body" id="modal-body">
+
+	<div class="formcontainer">
+		<form ng-submit="ctrl.submit()" 
+		name="myForm" 
+		class="form-horizontal">
+			<input type="hidden" ng-model="book.id" />
+
+			<div class="row">
+				<div class="form-group col-md-12">
+					<label class="control-lable label label-danger" for="file" style="font-size: 15px">
+					Do you want to delete the book with title:  {{book.title}}?
+					</label>					
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+<div class="modal-footer">
+	<button class="btn btn-danger" type="button" ng-click="deleteBook(book.id)">Delete</button>
+	<button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+</div>

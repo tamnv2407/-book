@@ -1,0 +1,21 @@
+A. ENVIRONMENT
+This application was build on 
+1. Maven 3.3.3
+2. Eclipse Kepler
+3. JDK 1.8.0.92
+
+B. BUILD AND LAUNCH APP
+To build and run this application, please follow below steps:
+1. Import project to Eclipse
+2. Build project as Maven build
+3. Run project via Application, select file BookApplication in package com.books
+4. When application is started successfully, open Chrome and enter link:
+http://localhost:8080/Books/#/login
+Use below information to login:
+email : user@gmail.com
+password: 123456
+
+C. NOTES
+1. This application using h2 database, therefore no need to config or prepare any datasource.
+2. Due for only demo, app is so simple with limit feature.
+3. Because short of time, coding convention may be not completly

@@ -1,0 +1,73 @@
+
+<div class="modal-header">
+	<h3 class="modal-title" id="modal-title">UPDATE BOOK</h3>
+	
+</div>
+
+<div class="modal-body" id="modal-body">
+
+	<div class="formcontainer">
+		<form ng-submit="ctrl.submit()" 
+		name="updateBookForm" 
+		class="form-horizontal">
+			<input type="hidden" ng-model="book.id" />
+			<div class="row">
+				<div class="form-group col-md-12">
+					<label class="col-md-2 control-lable" 
+					for="file">Title</label>
+					<div class="col-md-7">
+						<input type="text" 
+						ng-model="book.title" name="title"
+							class="username form-control input-sm"
+							placeholder="Enter books title"
+							 required 
+							 ng-minlength="3" />
+						<div class="has-error"
+						 ng-show="updateBookForm.$dirty">
+							<span ng-show="updateBookForm.title.$error.required">
+							This is a required field</span> 
+								<span ng-show="updateBookForm.title.$error.minlength">Minimum
+								length required is 3</span> 
+								<span ng-show="updateBookForm.uname.$invalid">This
+								field is invalid </span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="form-group col-md-12">
+					<label class="col-md-2 control-lable" for="file">Author</label>
+					<div class="col-md-7">
+						<input type="text" ng-model="book.author" required
+							class="form-control input-sm"
+							placeholder="Enter author" />
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="form-group col-md-12">
+					<label class="col-md-2 control-lable" for="file">Description</label>
+					<div class="col-md-7">
+						<input type="text" ng-model="book.description" name="desc"
+							class="form-control input-sm"
+							placeholder="Enter description" />
+						<div class="has-error" ng-show="updateBookForm.$dirty">
+							<span ng-show="updateBookForm.desc.$error.required">This is a
+								required field</span> <span ng-show="updateBookForm.desc.$invalid">This
+								field is invalid </span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+<div class="modal-footer">
+	<button class="btn btn-primary" ng-disabled="updateBookForm.$invalid"
+	type="button" 
+	ng-click="saveBook()">Save</button>
+	<button class="btn btn-warning" 
+	type="button" ng-click="cancel()">Cancel</button>
+</div>
